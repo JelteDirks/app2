@@ -18,12 +18,9 @@ export class RecipesPage implements OnInit {
             {
                 id: '1',
                 name: 'Spaghetti',
-                imageUrl: 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&' +
-                    'source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjQwpS_v' +
-                    'tzhAhWFJFAKHflWByAQjRx6BAgBEAU&url=https%3A%2F%2Fwww' +
-                    '.allesoveritaliaanseten.nl%2Frecepten%2Fspaghetti-met-' +
-                    'courgette-kaas-en-worst%2F&psig=AOvVaw3fiNVS_if3e9PnmXF' +
-                    'WRkg4&ust=1555774687877939',
+                imageUrl: 'https://www.okokorecepten.nl/i/recepten/kookboeken/' +
+                    '2008/happy-days-met-the-naked-chef/jamie-oliver-spaghetti' +
+                    '-salami-venkel-tomaten-500.jpg',
                 ingredients: ['pasta', 'sauce']
             }
         ];
