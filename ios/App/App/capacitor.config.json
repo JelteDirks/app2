@@ -1,0 +1,6 @@
+{
+  "appId": "io.jeake",
+  "appName": "app2",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}
