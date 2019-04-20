@@ -14,16 +14,6 @@ export class RecipesPage implements OnInit {
     }
 
     ngOnInit() {
-        this.recipes = [
-            {
-                id: '1',
-                name: 'Spaghetti',
-                imageUrl: 'https://www.okokorecepten.nl/i/recepten/kookboeken/' +
-                    '2008/happy-days-met-the-naked-chef/jamie-oliver-spaghetti' +
-                    '-salami-venkel-tomaten-500.jpg',
-                ingredients: ['pasta', 'sauce']
-            }
-        ];
     }
 
 }
