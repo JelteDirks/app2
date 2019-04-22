@@ -7,14 +7,38 @@
 
     <ion-content>
         <ion-list>
-            <ion-item><ion-icon name="home"></ion-icon>Mijn BSB</ion-item>
-            <ion-item><ion-icon name="contacts"></ion-icon>Contact</ion-item>
-            <ion-item><ion-icon name="logo-twitter"></ion-icon>Twitter</ion-item>
-            <ion-item><ion-icon name="logo-facebook"></ion-icon>Facebook</ion-item>
-            <ion-item><ion-icon name="paper"></ion-icon>Aanrijdingsformulier</ion-item>
-            <ion-item><ion-icon name="information-circle"></ion-icon>Algemene voorwaarden</ion-item>
-            <ion-item><ion-icon name="paper-plane"></ion-icon>Groene kaart aanvragen</ion-item>
-            <ion-item><ion-icon name="link"></ion-icon>Polisvoorwaarden</ion-item>
+            <ion-item [routerLink]="['./','home']">
+                <ion-icon name="home"></ion-icon>
+                Home
+            </ion-item>
+            <ion-item [routerLink]="['./', 'contact']">
+                <ion-icon name="contacts"></ion-icon>
+                Contact
+            </ion-item>
+            <ion-item>
+                <ion-icon name="logo-twitter"></ion-icon>
+                Twitter
+            </ion-item>
+            <ion-item>
+                <ion-icon name="logo-facebook"></ion-icon>
+                Facebook
+            </ion-item>
+            <ion-item>
+                <ion-icon name="paper"></ion-icon>
+                Aanrijdingsformulier
+            </ion-item>
+            <ion-item>
+                <ion-icon name="information-circle"></ion-icon>
+                Algemene voorwaarden
+            </ion-item>
+            <ion-item>
+                <ion-icon name="paper-plane"></ion-icon>
+                Groene kaart aanvragen
+            </ion-item>
+            <ion-item>
+                <ion-icon name="link"></ion-icon>
+                Polisvoorwaarden
+            </ion-item>
         </ion-list>
     </ion-content>
 </ion-menu>

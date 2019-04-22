@@ -20,9 +20,4 @@ export class MenuComponent implements OnInit {
         console.log(this.router.getCurrentNavigation());
         this.title = '';
     }
-
-    onOpenMenu(): void {
-        this.menuController.enable(true, 'main');
-        this.menuController.open('main');
-    }
 }
