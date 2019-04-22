@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {MenuController} from '@ionic/angular';
-import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
     selector: 'app-menu',
@@ -11,13 +9,9 @@ export class MenuComponent implements OnInit {
 
     public title: string;
 
-    constructor(private menuController: MenuController,
-                private activatedRoute: ActivatedRoute,
-                private router: Router) {
+    constructor() {
     }
 
     ngOnInit() {
-        console.log(this.router.getCurrentNavigation());
-        this.title = '';
     }
 }
