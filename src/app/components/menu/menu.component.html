@@ -1,4 +1,4 @@
-<ion-menu side="start" menuId="main" contentId="main-router" swipeGesture="true">
+<ion-menu side="start" menuId="main" contentId="main" swipeGesture="true">
     <ion-header>
         <ion-toolbar>
             <ion-buttons slot="start">
@@ -8,17 +8,17 @@
                     </ion-button>
                 </ion-menu-toggle>
             </ion-buttons>
-            <ion-title>{{title}}</ion-title>
+            <ion-title></ion-title>
         </ion-toolbar>
     </ion-header>
 
     <ion-content>
         <ion-list>
-            <ion-item [routerLink]="['./','home']">
+            <ion-item routerLink="/home">
                 <ion-icon name="home"></ion-icon>
                 Home
             </ion-item>
-            <ion-item [routerLink]="['./', 'contact']">
+            <ion-item routerLink="/contact">
                 <ion-icon name="contacts"></ion-icon>
                 Contact
             </ion-item>
