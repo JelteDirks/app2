@@ -15,7 +15,8 @@ const routes: Routes = [
                 loadChildren: './recipe-detail/recipe-detail.module#RecipeDetailPageModule'
             }
         ]
-    }
+    },
+  { path: 'home', loadChildren: './home/home.module#HomePageModule' }
 ];
 
 @NgModule({
