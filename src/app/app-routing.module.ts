@@ -2,21 +2,8 @@ import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-    {path: '', redirectTo: 'recipes', pathMatch: 'full'},
-    {
-        path: 'recipes',
-        children: [
-            {
-                path: '',
-                loadChildren: './recipes/recipes.module#RecipesPageModule'
-            },
-            {
-                path: ':recipeID',
-                loadChildren: './recipe-detail/recipe-detail.module#RecipeDetailPageModule'
-            }
-        ]
-    },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' }
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: 'home', loadChildren: './home/home.module#HomePageModule'}
 ];
 
 @NgModule({
