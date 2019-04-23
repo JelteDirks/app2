@@ -11,6 +11,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {MenuComponent} from './components/menu/menu.component';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 
 @NgModule({
     declarations: [AppComponent, MenuComponent],
@@ -19,7 +22,10 @@ import {AngularFireModule} from '@angular/fire';
         BrowserModule,
         IonicModule.forRoot(),
         AppRoutingModule,
-        AngularFireModule.initializeApp(environment.firebase)
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule,
+        AngularFireAuthModule,
+        AngularFireStorageModule
     ],
     providers: [
         StatusBar,
