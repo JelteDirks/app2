@@ -1,9 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>schade-melden</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+    <ion-title>Schade Melden</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-item-group>
+    <ion-item>
+      <ion-label position="floating">Naam</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Telefoonnummer</ion-label>
+      <ion-input type="tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Postcode & Huisnummer</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-item-group>
+
 </ion-content>
+
+header: Schade gegevens
+soort schade
+datum en tijd
+korte omschrijving
+locatie
+foto1
+foto2
+verstuur knop
