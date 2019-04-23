@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FirebaseService} from '../../firebase.service';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
     selector: 'app-login',
@@ -8,10 +9,22 @@ import {FirebaseService} from '../../firebase.service';
 })
 export class LoginPage implements OnInit {
 
-    constructor(private fb: FirebaseService) {
+    public loginForm: FormGroup;
+
+    constructor(private firebaseService: FirebaseService) {
     }
 
     ngOnInit() {
+        this.loginForm = new FormGroup({
+            email: new FormControl(''),
+            password: new FormControl('')
+        });
     }
 
+    submit(): void {
+        this.firebaseService.login({
+            user: this.loginForm.get('email').value,
+            password: this.loginForm.get('password').value
+        });
+    }
 }
