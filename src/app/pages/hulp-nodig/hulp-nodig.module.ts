@@ -15,6 +15,10 @@ const routes: Routes = [
     {
         path: 'bel-ons',
         loadChildren: './bel-ons/bel-ons.module#BelOnsPageModule'
+    },
+    {
+        path: 'noodnummers',
+        loadChildren: './noodnummers/noodnummers.module#NoodnummersPageModule'
     }
 ];
 
