@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>noodnummers</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Noodnummers</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-list>
+        <ion-list-header>
+            <ion-searchbar type="text"></ion-searchbar>
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Nederland</ion-label>
+            <ion-note>112</ion-note>
+        </ion-item>
+    </ion-list>
 </ion-content>
