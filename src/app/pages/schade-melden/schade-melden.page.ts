@@ -11,7 +11,7 @@ export class SchadeMeldenPage implements OnInit {
     private geo: GeolocationPlugin;
     private cam: CameraPlugin;
     public location;
-    public imageURIS: string[];
+    public imageURIS: string[] = [];
 
     constructor() {
     }

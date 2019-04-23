@@ -47,14 +47,10 @@
         <ion-datetime displayFormat="MMM DD, YYYY HH:mm"></ion-datetime>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="ion-padding-bottom">
         <ion-label position="floating">Locatie</ion-label>
-        <ion-button (click)="onGeoRequest()">Vraag locatie</ion-button>
+        <ion-input type="text"></ion-input>
     </ion-item>
-
-    <ion-button (click)="onCameraRequest()">Foto 1</ion-button>
-
-    <img id="demo-image" src="https://placehold.it/400x200" alt="">
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button>
