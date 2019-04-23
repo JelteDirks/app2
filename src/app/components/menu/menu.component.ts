@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
 
         this.router.events.subscribe(event => {
             if (event instanceof NavigationEnd) {
-                console.log(event);
+                this.menuCtrl.close('main');
             }
         });
     }
