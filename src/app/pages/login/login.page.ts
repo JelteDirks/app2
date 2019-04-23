@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FirebaseService} from '../../firebase.service';
-import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
+import UserCredential = firebase.auth.UserCredential;
 
 @Component({
     selector: 'app-login',
@@ -22,9 +23,18 @@ export class LoginPage implements OnInit {
     }
 
     submit(): void {
+        if (this.firebaseService.isLoggedIn()) {
+            return;
+        }
+
         this.firebaseService.login({
             user: this.loginForm.get('email').value,
             password: this.loginForm.get('password').value
+        }).then((u: UserCredential) => {
+            console.log('ok', u);
+        }).catch(e => {
+            console.log('nok', e);
         });
+        ;
     }
 }
