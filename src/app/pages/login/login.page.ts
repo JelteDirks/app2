@@ -35,6 +35,5 @@ export class LoginPage implements OnInit {
         }).catch(e => {
             console.log('nok', e);
         });
-        ;
     }
 }

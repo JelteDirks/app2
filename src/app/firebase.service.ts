@@ -19,9 +19,9 @@ export class FirebaseService implements OnInit {
         });
     }
 
-    public isLoggedIn(): User {
+    public isLoggedIn(): boolean {
         console.log(this.auth.auth.currentUser);
-        return this.auth.auth.currentUser;
+        return !!this.auth.auth.currentUser;
     }
 
     public login(user: { user: string, password: string }): Promise<UserCredential> {
