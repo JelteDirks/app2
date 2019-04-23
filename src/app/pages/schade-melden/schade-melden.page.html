@@ -1,44 +1,64 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-toggle>
-        <ion-button>
-          <ion-icon slot="icon-only" name="menu"></ion-icon>
-        </ion-button>
-      </ion-menu-toggle>
-    </ion-buttons>
-    <ion-title>Schade Melden</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-toggle>
+                <ion-button>
+                    <ion-icon slot="icon-only" name="menu"></ion-icon>
+                </ion-button>
+            </ion-menu-toggle>
+        </ion-buttons>
+        <ion-title>Schade Melden</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-item-group>
+    <h2 class="ion-padding-horizontal">Algemene gegevens</h2>
     <ion-item>
-      <ion-label position="floating">Naam</ion-label>
-      <ion-input type="text"></ion-input>
+        <ion-label position="floating">Naam</ion-label>
+        <ion-input type="text" inputmode="text"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Telefoonnummer</ion-label>
-      <ion-input type="tel"></ion-input>
+        <ion-label position="floating">Telefoonnummer</ion-label>
+        <ion-input type="tel" inputmode="tel"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email"></ion-input>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" inputmode="email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Postcode & Huisnummer</ion-label>
-      <ion-input type="text"></ion-input>
+        <ion-label position="floating">Postcode & huisnummer</ion-label>
+        <ion-input type="text" inputmode="text"></ion-input>
     </ion-item>
-  </ion-item-group>
 
+    <h2 class="ion-padding-horizontal ion-padding-top">Schade Gegevens</h2>
+    <ion-item>
+        <ion-label position="floating">Soort schade</ion-label>
+        <ion-input type="text" inputmode="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Korte omschrijving</ion-label>
+        <ion-textarea></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Datum & tijd</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY HH:mm"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Locatie</ion-label>
+        <ion-button (click)="onGeoRequest()">Vraag locatie</ion-button>
+    </ion-item>
+
+    <ion-button (click)="onCameraRequest()">Foto 1</ion-button>
+
+    <img id="demo-image" src="https://placehold.it/400x200" alt="">
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="send"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-content>
-
-header: Schade gegevens
-soort schade
-datum en tijd
-korte omschrijving
-locatie
-foto1
-foto2
-verstuur knop
