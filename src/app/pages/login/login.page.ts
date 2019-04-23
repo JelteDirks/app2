@@ -11,18 +11,27 @@ import UserCredential = firebase.auth.UserCredential;
 export class LoginPage implements OnInit {
 
     public loginForm: FormGroup;
+    public isLoggedIn: boolean;
 
     constructor(private firebaseService: FirebaseService) {
     }
 
     ngOnInit() {
+        this.isLoggedIn = this.firebaseService.isLoggedIn();
+
         this.loginForm = new FormGroup({
             email: new FormControl(''),
             password: new FormControl('')
         });
     }
 
-    submit(): void {
+    public onLogout(): void {
+        this.firebaseService.logout().then(() => {
+            console.log('logged out');
+        });
+    }
+
+    onLogin(): void {
         if (this.firebaseService.isLoggedIn()) {
             return;
         }
@@ -32,6 +41,7 @@ export class LoginPage implements OnInit {
             password: this.loginForm.get('password').value
         }).then((u: UserCredential) => {
             console.log('ok', u);
+            this.isLoggedIn = true;
         }).catch(e => {
             console.log('nok', e);
         });

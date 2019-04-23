@@ -20,11 +20,14 @@ export class FirebaseService implements OnInit {
     }
 
     public isLoggedIn(): boolean {
-        console.log(this.auth.auth.currentUser);
         return !!this.auth.auth.currentUser;
     }
 
     public login(user: { user: string, password: string }): Promise<UserCredential> {
         return this.auth.auth.signInWithEmailAndPassword(user.user, user.password);
+    }
+
+    public logout(): Promise<void> {
+        return this.auth.auth.signOut();
     }
 }
