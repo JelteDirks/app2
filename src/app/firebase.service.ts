@@ -17,4 +17,8 @@ export class FirebaseService implements OnInit {
             console.log(u);
         });
     }
+
+    login(user): void {
+
+    }
 }
