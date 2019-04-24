@@ -13,7 +13,6 @@ import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
-import {AngularFireStorageModule} from '@angular/fire/storage';
 
 @NgModule({
     declarations: [AppComponent, MenuComponent],
@@ -24,8 +23,7 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
         AppRoutingModule,
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule,
-        AngularFireAuthModule,
-        AngularFireStorageModule
+        AngularFireAuthModule
     ],
     providers: [
         StatusBar,

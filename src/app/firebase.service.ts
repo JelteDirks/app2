@@ -14,20 +14,5 @@ export class FirebaseService implements OnInit {
     }
 
     ngOnInit(): void {
-        this.auth.user.subscribe((u: User) => {
-            console.log(u);
-        });
-    }
-
-    public isLoggedIn(): boolean {
-        return !!this.auth.auth.currentUser;
-    }
-
-    public login(user: { user: string, password: string }): Promise<UserCredential> {
-        return this.auth.auth.signInWithEmailAndPassword(user.user, user.password);
-    }
-
-    public logout(): Promise<void> {
-        return this.auth.auth.signOut();
     }
 }
