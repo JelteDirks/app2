@@ -10,8 +10,7 @@ import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 export class MenuComponent implements OnInit {
 
     constructor(private menuCtrl: MenuController,
-                private router: Router,
-                private activatedRoute: ActivatedRoute) {
+                private router: Router) {
     }
 
     ngOnInit() {

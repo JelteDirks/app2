@@ -1,8 +1,6 @@
 import {Injectable, OnInit} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {User} from 'firebase';
-import UserCredential = firebase.auth.UserCredential;
 
 @Injectable({
     providedIn: 'root'
