@@ -2,5 +2,8 @@
   "appId": "io.jeake",
   "appName": "app2",
   "bundledWebRuntime": false,
-  "webDir": "www"
+  "webDir": "www",
+  "server": {
+    "url": "http://172.20.10.3:8100"
+  }
 }
